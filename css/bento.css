@@ -1,7 +1,28 @@
 body {
     background-color: #f2f4f8;
     font-family: 'Arial', sans-serif;
+    height: 100vh;
 }
+
+.navbar-dark {
+    background-color: #007bff !important;
+}
+
+.navbar-dark .navbar-brand {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.navbar-dark .nav-link {
+    font-size: 1.1rem;
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+.navbar-dark .nav-link:hover {
+    color: #ff8c94;
+}
+
 .bento-box {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));

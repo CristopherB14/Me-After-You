@@ -4,6 +4,25 @@ body {
     font-family: 'Arial', sans-serif;
 }
 
+.navbar-dark {
+    background-color: #007bff !important;
+}
+
+.navbar-dark .navbar-brand {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.navbar-dark .nav-link {
+    font-size: 1.1rem;
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+.navbar-dark .nav-link:hover {
+    color: #ff8c94;
+}
+
 /* Contenido del foro */
 .content {
     background-color: white;
