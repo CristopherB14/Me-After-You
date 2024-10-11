@@ -26,11 +26,13 @@ body {
 /* Contenido del Bento Grid */
 .bento-box {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(4, 1fr); /* Define 4 columnas */
+    grid-template-rows: repeat(3, 1fr); /* Define 3 filas */
     gap: 20px;
     margin-top: 30px;
 }
 
+/* Elementos de la cuadrícula */
 .bento-item {
     background-color: white;
     border-radius: 15px;
