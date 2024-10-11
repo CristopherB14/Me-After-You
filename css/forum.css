@@ -1,0 +1,47 @@
+/* Estilos generales */
+body {
+    background-color: #f2f4f8;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Contenido del foro */
+.content {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 30px;
+}
+
+/* Estilo para cada post */
+.post-box {
+    background-color: #e0f7fa;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 15px;
+    transition: transform 0.2s;
+}
+
+.post-box:hover {
+    transform: scale(1.02);
+}
+
+/* Navbar */
+.navbar-dark {
+    background-color: #007bff !important;
+}
+
+.navbar-dark .navbar-brand {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.navbar-dark .nav-link {
+    font-size: 1.1rem;
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+.navbar-dark .nav-link:hover {
+    color: #ff8c94;
+}

@@ -1,0 +1,116 @@
+/* General Styles */
+body {
+    background-color: #f2f4f8;
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar */
+.navbar-dark {
+    background-color: #007bff !important;
+}
+
+.navbar-dark .navbar-brand {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.navbar-dark .nav-link {
+    font-size: 1.1rem;
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+.navbar-dark .nav-link:hover {
+    color: #ff8c94;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, rgba(0,123,255,0.9), rgba(255,140,148,0.9)), url('img/hero-bg.jpg') no-repeat center center;
+    background-size: cover;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+}
+
+.hero-section .btn {
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 1.2rem;
+}
+
+/* Content Section */
+.content {
+    padding: 50px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+}
+
+.content h1 {
+    color: #007bff;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #007bff;
+    padding-bottom: 10px;
+}
+
+.content p {
+    font-size: 1.2rem;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.content img {
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.content img:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Testimonials Section */
+.testimonials-section {
+    padding: 60px 0;
+}
+
+.testimonial {
+    transition: all 0.3s ease;
+}
+
+.testimonial:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+footer {
+    background-color: #007bff;
+}
+
+footer a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #ff8c94;
+}
