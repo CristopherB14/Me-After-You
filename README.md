@@ -17,13 +17,27 @@
   - Realtime Database para gestionar las publicaciones de los usuarios
   - Firebase SDK para conexión y funcionalidad de la base de datos
 - **Firebase Hosting** (opcional, si decides alojarlo en Firebase)
-- **Netlify** para el despliegue del sitio web (ver el enlace abajo)
+- **Netlify** para el despliegue del sitio web
 
 ## Enlace al Proyecto
-
 Puedes acceder al proyecto en vivo desde el siguiente enlace:
 
 [Visita Me After You en Netlify](https://meafteryou.netlify.app/)
 
 ## Estructura del Proyecto
+Aquí hay un vistazo a la estructura de archivos de este proyecto:
 
+/Me-After-You │ ├── index.html # Página principal del foro ├── forum.html # Página del foro ├── aboutus.html # Información sobre el proyecto ├── css/ # Carpeta de estilos CSS │ ├── bento.css # Estilos para el diseño de cuadrícula │ └── main.css # Estilos principales ├── js/ # Carpeta de archivos JavaScript │ └── main.js # Lógica del foro ├── img/ # Carpeta de imágenes └── README.md # Este archivo
+
+
+## Cómo Contribuir
+¡Las contribuciones son bienvenidas! Si deseas mejorar este proyecto, sigue estos pasos:
+
+1. Haz un fork de este repositorio.
+2. Crea una nueva rama: `git checkout -b feature/NombreDeLaCaracterística`.
+3. Realiza tus cambios y confirma: `git commit -m 'Añadir nueva característica'`.
+4. Haz push a la rama: `git push origin feature/NombreDeLaCaracterística`.
+5. Abre un Pull Request.
+
+## Licencia
+Este proyecto está bajo la Licencia MIT. Para más detalles, consulta el archivo [LICENSE](LICENSE).
