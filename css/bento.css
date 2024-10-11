@@ -57,7 +57,7 @@ body {
 /* Asignar grid-column y grid-row específicos */
 #mindfulness {
     grid-column: 1; /* Toma 1 columna */
-    grid-row: 1 / 2; /* Fila 1 y 2 */
+    grid-row: 1 / 3; /* Fila 1, 2 y 3 */
     background-color: #ffeb3b; /* Color de fondo amarillo */
 }
 
