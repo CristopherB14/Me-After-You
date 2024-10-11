@@ -8,8 +8,71 @@
     <link href="css/forum.css" rel="stylesheet">
     <link rel="icon" href="img/sticker-png-circle-design-logo-selfhelp-customer-service-symbol-gesture-removebg-preview.png">
     <!-- Firebase -->
-    <script src="https://www.gstatic.com/firebasejs/9.19.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.19.1/firebase-database.js"></script>
+    <script type="module">
+        // Importar módulos de Firebase (versión modular)
+        import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.19.1/firebase-app.js';
+        import { getDatabase, ref, set, onValue, push } from 'https://www.gstatic.com/firebasejs/9.19.1/firebase-database.js';
+
+        // Configuración de Firebase
+        const firebaseConfig = {
+            apiKey: "AIzaSyD4LuaGz8LzBiF6xvyY_F-V_cgeyEVPvKY",
+            authDomain: "me-after-you.firebaseapp.com",
+            databaseURL: "https://me-after-you-default-rtdb.firebaseio.com/",
+            projectId: "me-after-you",
+            storageBucket: "me-after-you.appspot.com",
+            messagingSenderId: "98114739519",
+            appId: "1:98114739519:web:c495f4c467c277ede6878a",
+            measurementId: "G-029VLP4F99"
+        };
+
+        // Inicializar Firebase
+        const app = initializeApp(firebaseConfig);
+        const database = getDatabase(app);
+
+        // Función para añadir un nuevo post
+        function addPost() {
+            let postContent = document.getElementById("forumPost").value;
+
+            if (postContent.trim() !== "") {
+                // Referencia a la base de datos
+                const postsRef = ref(database, 'posts');  // Cambiado a 'ref' con la base de datos
+
+                // Añadir el nuevo post
+                push(postsRef, {
+                    content: postContent,
+                    timestamp: Date.now()
+                });
+
+                // Limpiar el textarea
+                document.getElementById("forumPost").value = "";
+
+                // Mostrar los posts actualizados
+                displayPosts();
+            }
+        }
+
+        // Función para mostrar los posts en la página
+        function displayPosts() {
+            const postsRef = ref(database, 'posts');  // Usando 'ref' con la base de datos
+            onValue(postsRef, (snapshot) => {
+                const posts = snapshot.val();
+                const postList = document.getElementById("postList");
+                postList.innerHTML = ""; // Limpiar la lista antes de mostrar los posts
+
+                if (posts) {
+                    for (let id in posts) {
+                        let li = document.createElement("li");
+                        li.className = "list-group-item post-box";
+                        li.textContent = posts[id].content;
+                        postList.appendChild(li);
+                    }
+                }
+            });
+        }
+
+        // Cargar los posts cuando la página se carga
+        document.addEventListener("DOMContentLoaded", displayPosts);
+    </script>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -39,66 +102,6 @@
         <h2 class="mt-5">Recent Posts</h2>
         <ul id="postList" class="list-group my-3"></ul>
     </div>
-
-    <script>
-        // Inicializar Firebase
-        const firebaseConfig = {
-            apiKey: "AIzaSyD4LuaGz8LzBiF6xvyY_F-V_cgeyEVPvKY",
-            authDomain: "me-after-you.firebaseapp.com",
-            databaseURL: "https://me-after-you-default-rtdb.firebaseio.com/", // Faltaba la URL de la base de datos
-            projectId: "me-after-you",
-            storageBucket: "me-after-you.appspot.com",
-            messagingSenderId: "98114739519",
-            appId: "1:98114739519:web:c495f4c467c277ede6878a",
-            measurementId: "G-029VLP4F99"
-        };
-
-        // Inicializar la app y la base de datos
-        const app = firebase.initializeApp(firebaseConfig);
-        const database = firebase.database();
-
-        // Función para añadir un nuevo post
-        function addPost() {
-            let postContent = document.getElementById("forumPost").value;
-
-            if (postContent.trim() !== "") {
-                // Referencia a la base de datos
-                const postsRef = database.ref('posts');
-
-                // Añadir el nuevo post
-                postsRef.push({
-                    content: postContent,
-                    timestamp: Date.now()
-                });
-
-                // Limpiar el textarea
-                document.getElementById("forumPost").value = "";
-
-                // Mostrar los posts actualizados
-                displayPosts();
-            }
-        }
-
-        // Función para mostrar los posts en la página
-        function displayPosts() {
-            const postsRef = database.ref('posts');
-            postsRef.on('value', (snapshot) => {
-                const posts = snapshot.val();
-                const postList = document.getElementById("postList");
-                postList.innerHTML = ""; // Limpiar la lista antes de mostrar los posts
-
-                for (let id in posts) {
-                    let li = document.createElement("li");
-                    li.className = "list-group-item post-box";
-                    li.textContent = posts[id].content;
-                    postList.appendChild(li);
-                }
-            });
-        }
-
-        // Cargar los posts cuando la página se carga
-        document.addEventListener("DOMContentLoaded", displayPosts);
-    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
