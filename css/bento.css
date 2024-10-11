@@ -27,7 +27,7 @@ body {
 .bento-box {
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* Define 4 columnas */
-    grid-template-rows: repeat(3, 1fr); /* Define 3 filas */
+    grid-template-rows: repeat(2, 1fr); /* Define 2 filas, ajusta según necesites */
     gap: 20px;
     margin-top: 30px;
 }
@@ -53,6 +53,47 @@ body {
 
 .bento-item p {
     color: #555;
+}
+
+/* Asignar grid-column y grid-row específicos */
+#mindfulness {
+    grid-column: 1 / 3; /* Toma 2 columnas */
+    grid-row: 1; /* Fila 1 */
+}
+
+#meditation {
+    grid-column: 3 / 5; /* Toma 2 columnas */
+    grid-row: 1; /* Fila 1 */
+}
+
+#personal-stories {
+    grid-column: 1; /* Columna 1 */
+    grid-row: 2; /* Fila 2 */
+}
+
+#professional-help {
+    grid-column: 2; /* Columna 2 */
+    grid-row: 2; /* Fila 2 */
+}
+
+#self-care {
+    grid-column: 3; /* Columna 3 */
+    grid-row: 2; /* Fila 2 */
+}
+
+#support-groups {
+    grid-column: 4; /* Columna 4 */
+    grid-row: 2; /* Fila 2 */
+}
+
+#coping-strategies {
+    grid-column: 1; /* Columna 1 */
+    grid-row: 3; /* Fila 3 */
+}
+
+#resources {
+    grid-column: 2 / 5; /* Toma 3 columnas */
+    grid-row: 3; /* Fila 3 */
 }
 
 /* Footer */
