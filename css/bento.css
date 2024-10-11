@@ -4,7 +4,6 @@ body {
     font-family: 'Arial', sans-serif;
 }
 
-/* Navbar */
 .navbar-dark {
     background-color: #007bff !important;
 }
@@ -24,13 +23,12 @@ body {
     color: #ff8c94;
 }
 
-/* Contenido de Bento */
+/* Contenido del Bento Grid */
 .bento-box {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 20px;
     margin-top: 30px;
-    flex: 1; /* El contenido crece para ocupar el espacio disponible */
 }
 
 .bento-item {
@@ -57,9 +55,7 @@ body {
 
 /* Footer */
 footer {
-    background-color: #343a40; /* Color de fondo del footer */
-    color: #ffffff; /* Color del texto del footer */
-    text-align: center; /* Alineación del texto */
-    padding: 10px 0; /* Espaciado del footer */
-    width: 100%; /* Ancho completo */
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
